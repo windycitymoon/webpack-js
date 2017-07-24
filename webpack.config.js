@@ -16,6 +16,7 @@ module.exports = {
     compress: true,
     stats: 'errors-only',
     open: true,
+    openPage: '', 
     port: 9000
   },
   module: {
