@@ -26,6 +26,11 @@ module.exports = {
         loader: 'html-loader'
       },
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
         exclude: /node_modules/,
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
