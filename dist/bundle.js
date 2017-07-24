@@ -69,7 +69,7 @@
 
 const css = __webpack_require__(1);
 
-console.log("Loading the JS, man");
+console.log("Loading the JS, Henry ");
 
 
 /***/ }),

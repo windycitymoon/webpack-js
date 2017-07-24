@@ -7,12 +7,16 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   devServer: {
     inline: true,
-    contentBase: './dist',
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    stats: 'errors-only',
+    open: true,
+    port: 9000
   },
   module: {
     loaders: [

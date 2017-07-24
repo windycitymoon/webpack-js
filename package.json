@@ -9,7 +9,7 @@
     "build": "webpack",
     "watch": "webpack --watch & node-sass --watch ./scss -o ./css",
     "serve": "npm run watch & live-server",
-    "dev": "npm run build & webpack-dev-server --inline"
+    "dev": "npm run build & webpack-dev-server"
   },
   "author": "Derek Moon",
   "license": "ISC",
