@@ -1,0 +1,37 @@
+{
+  "name": "basejs",
+  "version": "1.0.0",
+  "description": "A base starting point for local JS Development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copyHTML": "cp src/*.html dist/*.html",
+    "build": "webpack",
+    "watch": "webpack --watch & node-sass --watch ./scss -o ./css",
+    "serve": "npm run watch & live-server",
+    "dev": "npm run build & webpack-dev-server --inline"
+  },
+  "author": "Derek Moon",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "vue": "^2.4.2"
+  }
+}
