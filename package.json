@@ -4,8 +4,6 @@
   "description": "A base starting point for local JS Development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "copyHTML": "cp src/*.html dist/*.html",
     "build": "webpack",
     "watch": "webpack --watch & node-sass --watch ./scss -o ./css",
     "serve": "npm run watch & live-server",

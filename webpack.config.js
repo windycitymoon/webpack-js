@@ -16,15 +16,15 @@ module.exports = {
     compress: true,
     stats: 'errors-only',
     open: true,
-    openPage: '', 
+    openPage: '',
     port: 9000
   },
   module: {
-    loaders: [
+    rules: [
       {
         exclude: /node_modules/,
-        test: /\.html$/,
-        loader: 'html-loader'
+        use: 'babel-loader',
+        test: /\.(js|jsx)$/,
       },
       {
         test: /\.js$/,
@@ -33,11 +33,8 @@ module.exports = {
       },
       {
         exclude: /node_modules/,
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader','postcss-loader']
-        })
+        test: /\.html$/,
+        use: 'html-loader'
       },
       {
         exclude: /node_modules/,
@@ -52,17 +49,26 @@ module.exports = {
                         importLoaders: 2,
                     }
                   },
+                  'postcss-loader',
                   'sass-loader'
               ]
         })
       },
+      {
+        exclude: /node_modules/,
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['style-loader', 'css-loader']
+        })
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      title: 'JS Sandbox'
+      title: 'JS Dev Sandbox'
     }),
     new ExtractTextPlugin('style.css')
   ]
