@@ -1,2 +1,14 @@
 body {
-  background-color: white; }
+  background-color: yellow; }
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%; }
+
+li {
+  padding: 20px;
+  color: red; }
