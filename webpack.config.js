@@ -38,7 +38,7 @@ module.exports = {
           use: [  {
                     loader: 'css-loader',
                     query: {
-                        modules: true,
+                        modules: false,
                         sourceMap: true,
                         importLoaders: 2,
                     }
@@ -64,6 +64,6 @@ module.exports = {
       template: './src/index.html',
       title: 'JS Dev Sandbox'
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('app.css')
   ]
 }
