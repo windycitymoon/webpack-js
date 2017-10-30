@@ -22,8 +22,8 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules/,
-        use: 'babel-loader',
         test: /\.(js|jsx)$/,
+        use: 'babel-loader',
       },
       {
         exclude: /node_modules/,
