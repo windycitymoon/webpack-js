@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const Dotenv = require('dotenv-webpack');
 const path = require('path');
 
 module.exports = {
@@ -64,6 +65,9 @@ module.exports = {
       template: './src/index.html',
       title: 'JS Dev Sandbox'
     }),
-    new ExtractTextPlugin('app.css')
+    new ExtractTextPlugin('app.css'),
+    new Dotenv({
+      path: './.env'
+    })
   ]
 }
