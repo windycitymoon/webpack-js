@@ -28,6 +28,11 @@ module.exports = {
       },
       {
         exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
+        use: 'jshint-loader'
+      },
+      {
+        exclude: /node_modules/,
         test: /\.html$/,
         use: 'html-loader'
       },

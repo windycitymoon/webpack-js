@@ -1,3 +1,3 @@
 const css = require('./app.scss');
 
-console.log("Loading the JS");
+console.log('Loading the JS');
